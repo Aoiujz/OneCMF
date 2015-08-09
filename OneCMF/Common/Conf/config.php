@@ -15,4 +15,9 @@
 
 return array(
 
+    /* 注册名空间 */
+	'AUTOLOAD_NAMESPACE' => array(
+        'OC' => ONECMF_PATH, //OneCMF根命名空间
+    ),
+
 );
