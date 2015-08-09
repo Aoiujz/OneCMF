@@ -153,13 +153,22 @@ class Think {
           $name           =   strstr($class, '\\', true);
           if(in_array($name,array('Think','Org','Behavior','Com','Vendor')) || is_dir(LIB_PATH.$name)){ 
               // Library目录下面的命名空间自动定位
-              $path       =   LIB_PATH;
+              // $path       =   LIB_PATH;
+          		$path = LIB_PATH . $name . '/';
           }else{
               // 检测自定义命名空间 否则就以模块为命名空间
               $namespace  =   C('AUTOLOAD_NAMESPACE');
-              $path       =   isset($namespace[$name])? dirname($namespace[$name]).'/' : APP_PATH;
+              //$path       =   isset($namespace[$name])? dirname($namespace[$name]).'/' : APP_PATH;
+              
+              //去掉自定义命名空间和目录名必须一致的限制
+              $path = isset($namespace[$name]) ? $namespace[$name] : APP_PATH . $name . '/';
           }
-          $filename       =   $path . str_replace('\\', '/', $class) . EXT;
+          //$filename       =   $path . str_replace('\\', '/', $class) . EXT;
+          
+          //去掉自定义命名空间和目录名必须一致的限制后重新处理文件路径
+          $class    = substr($class, strlen($name) + 1);
+          $filename = $path . str_replace('\\', '/', $class) . EXT;
+
           if(is_file($filename)) {
               // Win环境下面严格区分大小写
               if (IS_WIN && false === strpos(str_replace('/', '\\', realpath($filename)), $class . EXT)){
