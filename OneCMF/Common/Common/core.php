@@ -17,7 +17,7 @@
 /**
  * 核心版本号
  */
-const OC_VERSION = '1.0.0-alpha';
+const OC_VERSION = '1.0.0-dev';
 
 /**
  * 管理后台模块
