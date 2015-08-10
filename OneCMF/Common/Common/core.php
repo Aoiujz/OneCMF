@@ -10,16 +10,24 @@
 // +----------------------------------------------------------------------
 
 /**
- * OneCMF 公共配置
+ * OneCMF 核心文件
+ * 主要定义版本，名称等核心常量
  */
 
-return array(
-    /* 自动加载OneCMF核心文件 */
-    'LOAD_EXT_FILE' => 'core',
+/**
+ * 核心版本号
+ */
+const OC_VERSION = '1.0.0-alpha';
 
-    /* 注册名空间 */
-	'AUTOLOAD_NAMESPACE' => array(
-        'OC' => ONECMF_PATH, //OneCMF根命名空间
-    ),
+/**
+ * 管理后台模块
+ * 该模块为系统核心模块，不需要安装，禁止卸载
+ */
+const OC_ADMIN_MODULE = 'Admin';
 
-);
+/**
+ * 创始人帐号
+ * 创始人帐号拥有系统最高权限（所有权限）
+ * 所有针对该帐号的权限设置无效
+ */
+const OC_ADMINISTRATOR = 1;
