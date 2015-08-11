@@ -10,13 +10,15 @@
 // +----------------------------------------------------------------------
 
 namespace Home\Controller;
+
 use Think\Controller;
+use OC\Api\AuthApi;
 
 /**
  * Home模块首页控制器
  */
 class IndexController extends Controller {
     public function index(){
-        echo 'Hello OneCMF!';
+        echo 'Hello OneCMF！ Version: ' . OC_VERSION;
     }
 }
