@@ -2,9 +2,9 @@
 // +----------------------------------------------------------------------
 // | OneCMF - 基于ThinkPHP的内容管理框架
 // +----------------------------------------------------------------------
-// | Copyright (c) 2015 www.onecmf.com All rights reserved.
+// | Copyright (c) 2015 麦当苗儿，ONECMF.COM
 // +----------------------------------------------------------------------
-// | Licensed ( http://mit-license.org )
+// | Licensed ( http://onecmf.mit-license.org/2015/license.html )
 // +----------------------------------------------------------------------
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <www.zjzit.cn>
 // +----------------------------------------------------------------------
@@ -52,7 +52,7 @@ define('COMMON_PATH', ONECMF_PATH);
  * 所有OneCMF的核心块，扩展模块都将定义在该目录
  * 该目录不受OC命名空间影响，直接遵循ThinkPHP模块命名空间即可
  */
-define('APP_PATH', ONECMF_PATH . 'Application/');
+define('APP_PATH', ONECMF_PATH . 'Module/');
 
 /**
  * 执行应用

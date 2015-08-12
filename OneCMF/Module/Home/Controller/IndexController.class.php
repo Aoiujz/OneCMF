@@ -2,9 +2,9 @@
 // +----------------------------------------------------------------------
 // | OneCMF - 基于ThinkPHP的内容管理框架
 // +----------------------------------------------------------------------
-// | Copyright (c) 2015 www.onecmf.com All rights reserved.
+// | Copyright (c) 2015 麦当苗儿，ONECMF.COM
 // +----------------------------------------------------------------------
-// | Licensed ( http://mit-license.org )
+// | Licensed ( http://onecmf.mit-license.org/2015/license.html )
 // +----------------------------------------------------------------------
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <www.zjzit.cn>
 // +----------------------------------------------------------------------
@@ -19,6 +19,6 @@ use OC\Api\AuthApi;
  */
 class IndexController extends Controller {
     public function index(){
-        echo 'Hello OneCMF！ Version: ' . OC_VERSION;
+        echo sprintf('Hello OneCMF！ Version: %s', OC_VERSION);
     }
 }
