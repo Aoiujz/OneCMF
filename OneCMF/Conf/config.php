@@ -18,7 +18,7 @@ return array(
     'LOAD_EXT_FILE' => 'core',
 
     /* 注册名空间 */
-	'AUTOLOAD_NAMESPACE' => array(
+    'AUTOLOAD_NAMESPACE' => array(
         'OC' => ONECMF_PATH, //OneCMF根命名空间
     ),
 
