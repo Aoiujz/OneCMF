@@ -14,7 +14,7 @@
  * ThinkPHP3.2.3要求PHP5.3.0以上版本
  * 但是OneCMF要求PHP5.4.0以上版本
  */
-version_compare(PHP_VERSION, '5.4.0', '<') && exit('require PHP > 5.3.0 !');
+version_compare(PHP_VERSION, '5.4.0', '<') && exit('require PHP > 5.4.0 !');
 
 /**
  * 应用调试模式 
@@ -48,11 +48,10 @@ define('COMMON_PATH', ONECMF_PATH);
 
 /**
  * OneCMF应用目录（模块目录）
- * 即ThinkPHP的模块目录，每个目录代表一个模块
+ * 即ThinkPHP的模块目录，每个子目录代表一个模块
  * 所有OneCMF的核心块，扩展模块都将定义在该目录
- * 该目录不受OC命名空间影响，直接遵循ThinkPHP模块命名空间即可
  */
-define('APP_PATH', ONECMF_PATH . 'Module/');
+define('APP_PATH', realpath('./Application') . '/');
 
 /**
  * 执行应用

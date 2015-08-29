@@ -12,13 +12,15 @@
 namespace Home\Controller;
 
 use Think\Controller;
-use OC\Api\AuthApi;
+use OC\Api\UserApi;
 
 /**
  * Home模块首页控制器
  */
 class IndexController extends Controller {
     public function index(){
-        echo sprintf('Hello OneCMF！ Version: %s', OC_VERSION);
+        //echo sprintf('Hello OneCMF！ Version: %s', OC_VERSION);
+        $data = UserApi::add();
+        var_dump($data);
     }
 }
